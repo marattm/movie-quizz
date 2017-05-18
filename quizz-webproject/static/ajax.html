@@ -1,0 +1,184 @@
+<!doctype html>
+
+   <head>
+       <meta charset="utf-8">
+       <title>jQuery Example</title>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+   </head>
+
+   <body>
+
+       <script type="text/javascript">
+       //README !!!
+       //il faut faire attention avec le data et le data.result, selon les cas il faut utiliser l'un ou l'autre
+
+       //SAVE SCORE
+       $(function() {
+           var submit_form = function(e) {
+               $.getJSON('/savescore', { // Url de la resource ajax
+                   name: $('input[name="input_name"]').val(),
+                   game: $('input[name="input_game"]').val(),
+                   score: $('input[name="input_score"]').val()
+               }, function(data) {//on recupere les data generee par le getJSON
+                   $('#saved').text(data.result);//on ecrit le resultat dans l'id output
+                   $('input[name=name]').focus().select();//une fois que la requete est terminé on place le curseur sur le champs input a
+               });
+               return false;
+           };
+
+           $('a#submit_score').bind('click', submit_form);
+
+           $('input[type=text]').bind('keydown', function(e) {
+               if (e.keyCode == 13) {
+                   submit_form(e);
+               }
+           });
+
+           $('input[name=a]').focus();
+       });
+
+       //ADD NUMBER
+       $(function() {
+           var submit_calculate = function(e) {
+               $.getJSON('/_add_numbers', { // Url de la resource ajax
+                   a: $('input[name="a"]').val(),
+                   b: $('input[name="b"]').val()
+               }, function(data) {//on recupere les data generee par le getJSON
+                   $('#result').text(data.result);//on ecrit le resultat dans l'id output
+                   $('input[name=a]').focus().select();//une fois que la requete est terminé on place le curseur sur le champs input a
+               });
+               return false;
+           };
+
+           $('a#calculate').bind('click', submit_calculate);
+
+           $('input[type=text]').bind('keydown', function(e) {
+               if (e.keyCode == 13) {
+                   submit_calculate(e);
+               }
+           });
+
+           $('input[name=a]').focus();
+       });
+
+       //VIEW SCORE
+       $(function() {
+           var view_form = function(e) {
+               $.getJSON('/scorebis', { // Url de la resource ajax
+                   name: $('input[name="output_name"]').val()
+               }, function(data) {//on recupere les data generee par le getJSON
+                   $('#viewscore').text(data);//on ecrit le resultat dans l'id output
+                   $('input[name=a]').focus().select();//une fois que la requete est terminé on place le curseur sur le champs input a
+               });
+               return false;
+           };
+
+           $('a#view_score').bind('click', view_form);
+
+           $('input[type=text]').bind('keydown', function(e) {
+               if (e.keyCode == 13) {
+                   view_form(e);
+               }
+           });
+
+           $('input[name=a]').focus();
+       });
+
+       //DELETE SCORE
+       $(function() { //penser a installer une fenetre popup d'avertissement que le profil et le score va etre supprimer
+           var delete_form = function(e) {
+               $.getJSON('/delete_score', { // Url de la resource ajax
+                   name: $('input[name="delete_name"]').val()
+               }, function(data) {//on recupere les data generee par le getJSON
+                   $('#deletescore').text(data.result);//on ecrit le resultat dans l'id output
+                   $('input[name=a]').focus().select();//une fois que la requete est terminé on place le curseur sur le champs input a
+               });
+               return false;
+           };
+
+           $('a#delete_score').bind('click', delete_form);
+
+           $('input[type=text]').bind('keydown', function(e) {
+               if (e.keyCode == 13) {
+                   view_form(e);
+               }
+           });
+
+           $('input[name=a]').focus();
+       });
+
+       //GET QUIZZ DATA
+       $(function() {
+           var view_form = function(e) {
+               $.getJSON('/getquizzdata', {},
+               function(data) {//on recupere les data generee par le getJSON
+                   $('#getquizzdata_ank').text(data);//on ecrit le resultat dans l'id output
+               });
+               return false;
+           };
+
+           $('a#get_quizz_data_link').bind('click', view_form);
+
+           $('input[type=text]').bind('keydown', function(e) {
+               if (e.keyCode == 13) {
+                   view_form(e);
+               }
+           });
+       });
+
+       //je pense qu'il faut reprendre la fonction essayer de la refaire
+       </script>
+
+       <h1>jQuery Example</h1>
+
+       <div id=block_calculator class="function">
+         <h2>1. Calculator</h2>
+         <p>
+           <input type="text" size="5" name="a"> +
+           <input type="text" size="5" name="b"> =
+           <span id="result">?</span>
+         </p>
+         <p><a href=# id="calculate">Calculate</a></p>
+       </div>
+
+       <div id="block_input_user_form"class="function">
+         <h2>2. Save your score</h2>
+         <p>name : <input type="text" name="input_name" size="10"></p>
+         <p>game : <input type="text" name="input_game" size="10"></p>
+         <p>score : <input type="text" name="input_score" size="10"></p>
+         <p><a href=# id="submit_score">Submit score</a></p>
+         <p><span id="saved"></span></p>
+       </div>
+
+       <div id="block_output_user_score" class="function">
+         <h2>3. View your score</h2>
+         <p>name : <input type="text" name="output_name" size="10"></p>
+         <p><a href=# id="view_score">View score</a></p>
+         <p><span id="viewscore"></span></p>
+         <h3>3.1 affichage par liste</h3>
+         <h3>3.2 ajout des options d'affichage par ordre specifique</h3>
+         <h3>3.3 ajout des boutons "delete" a coté de chaques items</h3>
+         <h3>3.4 ajout de checkboc pour selectioner les scores / porfils à supprimer</h3>
+       </div>
+
+       <div id="block_delete" class="function">
+         <h2>4. Delete your score</h2>
+         <p>name : <input type="text" name="delete_name" size="10"></p>
+         <p><a href=# id="delete_score">Delete score</a></p>
+         <p><span id="deletescore"></span></p>
+       </div>
+
+       <div id="block_update" class="function">
+         <h2>5. Update your score</h2>
+         <p>name : <input type="text" name="update_name" size="10"></p>
+         <p><a href=# id="update_score">Delete score</a></p>
+         <p><span id="updatescore"></span></p>
+       </div>
+
+       <div id="block_get_quizz_data" class="function">
+         <h2>6. Quizz data</h2>
+         <p><a href=# id="get_quizz_data_link">Get quizz data</a></p>
+         <p><span id="getquizzdata_ank"></span></p>
+       </div>
+   </body>
+</html>

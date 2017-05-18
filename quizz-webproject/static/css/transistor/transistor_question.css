@@ -1,0 +1,97 @@
+p{
+	padding: 1%;
+}
+
+#content_header > P{
+	margin-top: 150px;
+	border: solid;
+	font-size: 20px;
+	color: white;}
+
+	/*.question_block{ version flex
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+		align-items: center;
+    /*height: 960px;
+		overflow: scroll;*/
+		/*background-color: RGBa(255,255,255,0.2);
+		margin-top: 20%;
+
+		/*border: 1px #CB1F3C solid;
+		border-radius: 35px 35px 35px 35px;*/
+
+		/*background: url("img/transistor_flagship.png") no-repeat center center fixed;
+    background-size: cover;
+  	background-clip: content-box;
+	}*/
+	.question_block{
+		display: grid;
+	  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	  grid-template-rows: 1fr 1fr 1fr;
+	  grid-column-gap: 5px;
+	  grid-row-gap: 5px;
+
+		margin-top: 20%;
+
+		/*border: 1px #CB1F3C solid;
+		border-radius: 35px 35px 35px 35px;*/
+
+		background: url("img/transistor_flagship.png") no-repeat center center fixed;
+    background-size: cover;
+  	background-clip: content-box;
+	}
+		.question_type {color : RGBa(0,0,0,0.9); /*#CB1F3C;
+			/*position:sticky;*/
+
+			background-color: RGBa(197,207,216,0.6);
+			font: georgia;
+			/*border: 1px #CB1F3C solid;
+			border-bottom: 1px #CB1F3C solid;
+			border-left: 1px #CB1F3C solid;*/
+			border-radius: 35px 35px 35px 35px;
+			flex-direction:row;
+
+			/*margin-left:5%;
+			margin-right: 5%;*/
+		}
+		.question_image {
+			display: flex;
+			justify-content: center;
+			/*border: 1px #CB1F3C solid;
+			border-radius: 35px 35px 35px 35px;
+			margin-right: 25%*/
+		}
+			.question_name{
+				margin-left:5%;
+				/*border: 1px #CB1F3C solid;
+				border-radius: 35px 35px 35px 35px;
+				margin:1%*/
+			}
+		.question_entry{
+		  margin-left:5%;
+			display:flex;
+			justify-content:space-around;
+			align-items:center;
+			margin-bottom: 1%;
+			/*border: 1px #CB1F3C solid;
+			border-radius: 35px 35px 35px 35px;
+			margin:1%*/
+		}
+		.question_image *{
+		  text-align: center;
+		  position: relative;
+		  max-height:90%;
+		  max-width: 90%;
+		  vertical-align: middle;
+		  padding: 2%;
+		}
+			.question_answer{
+				/*float:left;*/
+			}
+			.question_validation{
+				/*float:right;*/
+			}
+.information_block{
+
+}

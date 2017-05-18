@@ -1,0 +1,77 @@
+/* nouvelle configuration */
+
+* {margin: 0;padding: 0;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+/* *:after, *:before { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}*/
+
+/*article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {  display: flex;}*/
+
+
+html {
+  /*font-size: 100%;*/
+  /*height: auto !important;*/
+  height: 100%;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;}
+
+
+.clear {display: block;	}
+.clear::after {clear: both;content: ".";display: block;height: 1px;visibility: hidden;}
+
+/*GENERIC STYLES*/
+body {
+  background: #f2f2f2;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-size: 1.05em;
+  font-weight: 400;
+  /*height: auto !important;*/
+  height: 100%;
+  margin: 0;
+  line-height: 1.6rem;
+  min-height: 100%;}
+
+
+/* Ancienne configuration
+* {margin: 0;padding: 0;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:after, *:before { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {  display: block;}
+html {font-size: 100%;height: auto !important;height: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.clear {display: block;	}
+.clear::after {clear: both;content: ".";display: block;height: 1px;visibility: hidden;}
+*/
+/*GENERIC STYLES*/
+/*body {
+  background: #f2f2f2;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.05em;
+  font-weight: 400;
+  height: auto !important;
+  height: 100%;
+  line-height: 1.6rem;
+  min-height: 100%;}*/
+
+
+/* premier html NE PAS SUPPRMIER
+html {
+  margin:0;
+  padding:0;
+  background: url("../img/transistor_flagship.png") no-repeat center center fixed;
+  background-size: cover;
+	background-clip: content-box;
+}
+
+body {
+	/*height: 100%;
+	margin: 0;*/
+	/*background-color: RGBa(197,227,216,0.3);*/
+	/*margin-left:5%;
+	margin-right:5%;
+	padding: 1%;
+	border: 1px #801FDA solid;
+	border-radius: 35px 35px 35px 35px;
+
+}*/

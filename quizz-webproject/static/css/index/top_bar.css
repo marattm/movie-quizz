@@ -1,0 +1,48 @@
+#GrandeIntro {
+  height: 100%;
+  background: url(http://wallpaperswide.com/download/mountains_woods_sunset-wallpaper-1366x768.jpg) center no-repeat;
+  background-size: cover;
+}
+#siteWrapper {
+  margin-top: -80px;
+}
+/* #siteWrapper header {
+  height: 80px;
+  background: #eee;
+} */
+#siteWrapper header.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#siteWrapper header.fixed+#content {
+  margin-top: 80px; /*extensions du bandeau*/
+}
+#content{
+  padding: 0px 0;
+  background: url(http://cdn.wallpapersafari.com/43/88/nGuQKl.jpg) center no-repeat;
+}
+#content div{
+  width: 80%;
+  height: 768px;
+  margin: auto;
+}
+#content2{
+  padding: 0px 0;
+  background: url(http://www.wallpaperdx.com/photo/blue-mountains-lake-landscape-full-hd-nature-wallpaper-1366-768.jpg) center no-repeat;
+}
+#content2 div{
+  width: 80%;
+  height: 768px;
+  margin: auto;
+}
+#content3{
+  padding: 0px 0;
+  background: url(http://www.wallpaperdx.com/photo/green-forest-in-forest-full-hd-nature-wallpaper-1366-768.jpg) center no-repeat;
+}
+#content3 div{
+  width: 80%;
+  height: 768px;
+  margin: auto;
+}
