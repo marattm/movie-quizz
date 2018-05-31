@@ -8,7 +8,7 @@
     - [x] Flask set up
     - [x] Docker set up
     - [x] DB set up
-    - [ ] Testing
+    - [x] Testing
     - [ ] Deployment
     - [ ] Code Coverage & Quality
     - [ ] Continuous Integration
@@ -44,7 +44,13 @@ Go to http://127.0.0.1:5001/quizz/ping
 3. Other command line
     - Recreate DB
 ```
-docker-compose -f docker-compose-dev.yml run quizz python manage.py recreate_db 
+docker-compose -f docker-compose-dev.yml run [service]] python manage.py recreate_db
+docker-compose -f docker-compose-dev.yml run quizz python manage.py recreate_db
+```
+    - Testing
+```
+docker-compose -f docker-compose-dev.yml run [service] python manage.py test
+docker-compose -f docker-compose-dev.yml run quizz python manage.py test
 ```
 
 
