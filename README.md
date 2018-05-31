@@ -1,6 +1,11 @@
 # quizz-webproject
 
+## Refactoring Roadmap
 [ Refactoring application to micro services ]
+
+- Environment setup
+
+## Previous Roadmap
 
 Quizz game based on cinematograhic questions
 
