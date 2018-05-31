@@ -11,12 +11,23 @@
     - [ ] Testing
 
 ### Quick Start
+
+1. Simple Service
 ```
 cd services/quizz
 python manage.py run
 ```
 
 Go to http://127.0.0.1:5000/quizz/ping
+
+2. Container
+```
+docker-compose -f docker-compose-dev.yml build
+docker-compose -f docker-compose-dev.yml up -d --build
+```
+
+Go to http://127.0.0.1:5001/quizz/ping
+
 
 ## Previous Roadmap
 
