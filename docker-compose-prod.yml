@@ -6,15 +6,12 @@ services:
     container_name: quizz
     build:
       context: ./services/quizz
-      dockerfile: Dockerfile-dev
-    volumes:
-      - './services/quizz:/usr/src/app'
-    ports:
-      - 5001:5000
+      dockerfile: Dockerfile-prod
+    expose:
+      - '5000'
     environment:
-      - FLASK_DEBUG=1
-      - APP_SETTINGS=project.config.DevelopmentConfig
-      - DATABASE_URL=postgres://postgres:postgres@quizz-db:5432/quizz_dev
+      - APP_SETTINGS=project.config.ProductionConfig
+      - DATABASE_URL=postgres://postgres:postgres@quizz-db:5432/quizz_prod
       - DATABASE_TEST_URL=postgres://postgres:postgres@quizz-db:5432/quizz_test
     depends_on:
       - quizz-db
@@ -31,12 +28,12 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRE_PASSWORD=postgres
-
+  
   nginx:
     container_name: nginx
     build: 
       context: ./services/nginx
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile-prod
     restart: always
     ports:
       - 80:80

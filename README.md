@@ -9,7 +9,7 @@
     - [x] Docker set up
     - [x] DB set up
     - [x] Testing
-    - [ ] Deployment
+    - [x] Deployment
     - [ ] Code Coverage & Quality
     - [ ] Continuous Integration
 * [ ] Backend
@@ -53,6 +53,13 @@ docker-compose -f docker-compose-dev.yml run quizz python manage.py recreate_db
 docker-compose -f docker-compose-dev.yml run [service] python manage.py test
 docker-compose -f docker-compose-dev.yml run quizz python manage.py test
 ```
+    - Checking env
+```
+docker-compose -f docker-compose-prod.yml run [services] env
+docker-compose -f docker-compose-prod.yml run quizz env
+```
+
+
 
 
 ## Previous Roadmap
