@@ -3,10 +3,10 @@ import peewee as pw
 
 # connection a la base de donnees
 myDB = pw.MySQLDatabase("marattm_webproject_quizz",
-    host="mysql2.paris1.alwaysdata.com",
-    port=3306,
-    user="marattm",
-    passwd="Azer0123")
+                        host="mysql2.paris1.alwaysdata.com",
+                        port=3306,
+                        user="marattm",
+                        passwd="Azer0123")
 myDB.connect()
 
 # Definition de la table 'HighScore'
