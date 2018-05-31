@@ -13,7 +13,8 @@
     - [ ] Code Coverage & Quality
     - [ ] Continuous Integration
 * [ ] Backend
-    - [ ] Blueprints
+    - [x] Application Factory
+    - [x] Blueprints
     - [ ] RESTful Routes
 * [ ] Frontend
     - [ ] Jinja
@@ -33,7 +34,7 @@ python manage.py run
 
 Go to http://127.0.0.1:5000/quizz/ping
 
-2. Container
+2. Run Containers
 ```
 docker-compose -f docker-compose-dev.yml build
 docker-compose -f docker-compose-dev.yml up -d --build
@@ -41,10 +42,10 @@ docker-compose -f docker-compose-dev.yml up -d --build
 
 Go to http://127.0.0.1:5001/quizz/ping
 
-3. Other command line
+3. Other command lines
     - Recreate DB
 ```
-docker-compose -f docker-compose-dev.yml run [service]] python manage.py recreate_db
+docker-compose -f docker-compose-dev.yml run [service] python manage.py recreate_db
 docker-compose -f docker-compose-dev.yml run quizz python manage.py recreate_db
 ```
     - Testing
