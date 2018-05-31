@@ -4,17 +4,17 @@
 [ Refactoring application to micro services ]
 
 ### Roadmap
-[] Environment setup
+* [ ] Environment setup
     - [x] Flask set up
-    - [] Docker set up
-    - [] DB set up
-    - [] Testing
+    - [x] Docker set up
+    - [ ] DB set up
+    - [ ] Testing
 
 ### Quick Start
-'''
+```
 cd services/quizz
 python manage.py run
-'''
+```
 
 Go to http://127.0.0.1:5000/quizz/ping
 
