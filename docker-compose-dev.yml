@@ -1,0 +1,17 @@
+version : '3.4'
+
+services:
+
+  quizz:
+    container_name: quizz
+    build:
+      context: ./services/quizz
+      dockerfile: Dockerfile-dev
+    volumes:
+      - './services/quizz:/usr/src/app'
+    ports:
+      - 5001:5000
+    environment:
+      - FLASK_APP=project/__init__.py
+      - FLASK_DEBUG=1
+      - APP_SETTINGS=project.config.DevelopmentConfig

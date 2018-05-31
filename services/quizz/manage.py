@@ -1,6 +1,6 @@
 # services/quizz/manage.py
 
-from flask_cli import FlaskGroup
+from flask.cli import FlaskGroup
 
 from project import app
 
