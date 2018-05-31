@@ -7,8 +7,21 @@
 * [ ] Environment setup
     - [x] Flask set up
     - [x] Docker set up
-    - [ ] DB set up
+    - [x] DB set up
     - [ ] Testing
+    - [ ] Deployment
+    - [ ] Code Coverage & Quality
+    - [ ] Continuous Integration
+* [ ] Backend
+    - [ ] Blueprints
+    - [ ] RESTful Routes
+* [ ] Frontend
+    - [ ] Jinja
+    - [ ] ReactJs
+    - [ ] Docker
+    - [ ] Testing
+    - [ ] Routing
+    
 
 ### Quick Start
 
@@ -27,6 +40,12 @@ docker-compose -f docker-compose-dev.yml up -d --build
 ```
 
 Go to http://127.0.0.1:5001/quizz/ping
+
+3. Other command line
+    - Recreate DB
+```
+docker-compose -f docker-compose-dev.yml run quizz python manage.py recreate_db 
+```
 
 
 ## Previous Roadmap
